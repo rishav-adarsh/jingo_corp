@@ -102,6 +102,7 @@ router.post("/signin", async (req, res) => {
 // population mainly begins at /fetchcart and /cartlist only
 router.post("/fetchcart", async (req, res) => {
     const { activeUser } = req.body;
+    // console.log(req.body);
 
     if (!activeUser) {
         return res
