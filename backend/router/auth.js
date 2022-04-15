@@ -73,7 +73,6 @@ router.post("/signin", async (req, res) => {
 
     try {
         const userLogin = await User.findOne({ email: email });
-        // console.log("==> "+userLogin);
         if (!userLogin) {
             // console.log("==> "+userLogin);
             res.status(400).json({ error: "User not exists !!" });
